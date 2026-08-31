@@ -1,0 +1,14 @@
+.git
+.gitignore
+
+__pycache__
+*.pyc
+
+dashboard/flowopt-dashboard/node_modules
+dashboard/flowopt-dashboard/build
+
+.env
+.env.*
+
+.vscode
+.idea

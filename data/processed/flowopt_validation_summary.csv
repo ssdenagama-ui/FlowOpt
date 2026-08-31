@@ -1,0 +1,6 @@
+Task,Full MAE,Full RMSE,Full R²,LOO-CV MAE
+Total Inpatient Admissions,0.0001,0.0001,1.0,0.0002
+Bed Occupancy Rate,0.0,0.0,1.0,0.0
+Avg Length of Stay,0.0,0.0,1.0,0.0
+OPD Attendance,96132.7533,114204.2435,0.9988,1062809.7486
+Discharge Volume,0.0001,0.0001,1.0,0.0002

@@ -1,0 +1,36 @@
+services:
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: flowopt-api
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - ./flowopt.db:/app/flowopt.db
+      - ./models:/app/models
+
+    restart: unless-stopped
+
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+
+    container_name: flowopt-dashboard
+
+    ports:
+      - "3000:3000"
+
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000
+
+    depends_on:
+      - api
+
+    restart: unless-stopped
